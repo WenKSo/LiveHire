@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link rel="shortcut icon" href="ico.png" type="image/x-icon" />
+    <title>LiveHire | Sign up</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <script src="site.js"></script>
+  </head>
+  <body>
+    <div class="top">
+      <div class="logo">
+        <img src="logo.png" width="320" alt="Logo"></div>
+    <div class="topbar">
+        <nav>
+          <ul>
+           <li><a href="Home.html" target="_blank">Home</a></li>
+            <li><a href="Selection.html" target="_blank">Arrange A Performance</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+            <li><a href="contact.html" target="_blank">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="Form">
+      <form name="forma" id="forma" autocomplete="off" method="get" onsubmit="summarize2(); return false;">
+      <fieldset>
+        <legend>User Info</legend>
+        <label for="firstname" class="labelitem">First name:</label>
+        <input type="text" name="firstname" id="firstname" size="24" maxlength="32" placeholder="Enter first name." required pattern="[a-zA-Z][a-zA-Z'\- ]*" title="First name cannot be blank." /><br />
+        <label for="lastname" class="labelitem">Last name:</label>
+        <input type="text" name="lastname" id="lastname" size="24" maxlength="32" placeholder="Enter last name." required pattern="[a-zA-Z][a-zA-Z'\- ]*" title="Last name cannot be blank." /><br />
+        <label for="date_enrolled" class="labelitem">DOB:</label>
+        <input type="date" name="date_enrolled" id="date_enrolled" /><br />
+        <div class="labelitem"><label for="address1">Address:</label></div>
+        <div class="inputitem">
+          <input type="text" name="address1" id="address1" size="24" maxlength="32" placeholder="Enter street address." required pattern=".+" title="Address cannot be blank." /><br />
+          <input type="text" name="address2" id="address2" size="24" maxlength="32" /><br />
+        </div><br />
+        <label for="city" class="labelitem">City:</label>
+        <input type="text" name="city" id="city" size="24" maxlength="32" placeholder="Enter city." required /><br />
+        <label for="state" class="labelitem">State:</label>
+        <select name="state" id="state" required>
+          <option value="" selected disabled>Choose a state</option>
+          <optgroup label="Mid-Atlantic">
+            <option value="Delaware">Delaware</option>
+            <option value="Washington, D.C.">Washington, D.C.</option>
+            <option value="Maryland">Maryland</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New York">New York</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Virginia">Virginia</option>
+            <option value="West Virginia">West Virginia</option>
+          </optgroup>
+          <optgroup label="New England">
+            <option value="Connecticut">Connecticut</option>
+            <option value="Maine">Maine</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="Vermont">Vermont</option>
+          </optgroup>
+        </select><br />
+        <label for="zipcode" class="labelitem">Zip code:</label>
+        <input type="text" name="zipcode" id="zipcode" size="24" maxlength="10" placeholder="Enter zip code." required pattern="\d{5}(\-\d{4})?" title="##### or #####-####" /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Your Info</legend>
+        <label for="sid" class="labelitem">Account:</label>
+        <input type="text" name="sid" id="sid" size="24" maxlength="8" required /><br />
+        <label for="password" class="labelitem">Password:</label>
+        <div class="inputitem">
+          <input type="password" name="password" id="password" pattern=".{8,}" required /><br />
+          <p class="info">Password must be at least 8 characters.</p>
+        </div><br /><br />
+        <div class="labelitem">Do you have experience in live performance?</div>
+        <div class="inputitem">
+          <input class="radio" type="radio" name="YN" id="yes" value="yes" checked="checked" />
+          <label for="yes">Yes</label><br />
+          <input class="radio" type="radio" name="YN" id="no" value="no" />
+          <label for="no">No</label><br />
+        </div><br /><br />
+         
+        <div class="labelitem">Instrument</div>
+        <div class="inputitem">
+          <input class="radio" type="radio" name="instrument" id="guitar" value="guitar" />
+          <label for="guitar">Guitar</label><br />
+          <input class="radio" type="radio" name="instrument" id="piano" value="piano" />
+          <label for="piano">Piano</label><br />
+          <input class="radio" type="radio" name="instrument" id="violin" value="violin" />
+          <label for="violin">Violin</label><br />
+          <input class="radio" type="radio" name="instrument" id="drum" value="drum" />
+          <label for="drum">Drum</label><br />
+          <input class="radio" type="radio" name="instrument" id="bass" value="bass" />
+          <label for="bass">Bass</label><br />
+         <br />
+        </div><br />
+        <div class="labelitem">Genre:</div>
+        <div class="inputitem">
+          <input class="radio" type="checkbox" name="genre" id="classic" value="classic" />
+          <label for="classic">Classic</label><br/>
+          <input class="radio" type="checkbox" name="genre" id="rock" value="rock" />
+          <label for="rock">Rock</label><br/>
+          <input class="radio" type="checkbox" name="genre" id="pop" value="pop" />
+          <label for="pop">Pop</label><br/>
+          <br />
+        </div>
+          <label for="fun_facts" class="labelitem">Describe your former performance:</label>
+        <textarea name="fun_facts" id="fun_facts" rows="5" cols="30" placeholder="Enter here."></textarea><br />
+      </fieldset>
+      <section id="reset_submit">
+        <input type="reset" value="Reset" onclick="reset_form()" />
+        <input type="submit" value="Submit" />
+      </section><br />
+      <div id="summary_wrapper">
+        <fieldset>
+          <legend>Summary</legend>
+          <section id="summary"></section>
+        </fieldset>
+      </div>
+    </form>
+        </div></div>
+    <hr/>
+    <div class="copy">
+            <p>Copyright &copy; 2014.Company name All rights reserved.</p>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+body {
+  font: 1em sans-serif;
+}
+.top{
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 720px;
+    min-width: 360px;
+}
+.logo{
+    float: left
+}
+.AD{
+    float: right;
+    text-align: right;
+    font-size: 1.2em;
+} 
+
+nav {
+  display: table;
+  background-color: black;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 15px;
+}
+nav>ul { display: table-row }
+nav>ul>li {
+  display: table-cell;
+  text-align: center;
+  width: 16%;
+  white-space: nowrap;
+  padding: 5px 0;
+}
+nav>ul>li>a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.Form{
+    text-align: center;
+    border: solid 4px #a1a1a1;
+    border-color: gray;
+    background-color: lightgray;
+    border-radius: 15px;
+    border: solid 4px #a1a1a1;
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    min-width: 360px;
+    
+}
+form, #summary_wrapper {
+  display: inline-block;
+  background-color: #f3f3f3;
+  margin: 20px;
+  padding: 40px;
+  text-align: left;
+  border: solid 4px #a1a1a1;
+
+}
+fieldset {
+  border: solid 3px #a1a1a1;
+  margin-bottom: 20px;
+  padding: 10px 90px; 
+}
+input, select, textarea {
+  display: block;
+  float: left;
+  margin: 5px;
+  box-sizing: border-box;
+}
+input[type=text], input[type=password], select, textarea {
+  width: 200px;
+}
+input:required:invalid {
+  background: white right no-repeat url("invalid.png");
+}
+input:required:valid {
+  background: white right no-repeat url("valid.png");
+}
+input:required:valid ~ p.info {
+  visibility: hidden;
+}
+.inputitem {
+  display: block;
+  float: left;
+}
+.labelitem {
+  display: block;
+  float: left;
+  vertical-align: text-top;
+  width: 120px;
+  margin: 5px;
+  padding: 1px 5px;
+  
+}
+br {
+  clear: left;
+}
+p.info {
+  font-size: 0.7em;
+  color: red;
+  display: block;
+  margin: 0 0 0 2px;
+}
+#reset_submit {
+  float: right;
+}
+#summary_wrapper {
+  display: none;
+}
+.copy{
+text-align: center;}

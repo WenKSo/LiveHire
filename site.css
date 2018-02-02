@@ -1,0 +1,357 @@
+* {
+  font-size: 1em;
+  font-family: "Arial", sans-serif;
+}
+body {  background-color: white }
+.top{
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 720px;
+    min-width: 360px;
+}
+
+#wrapper {
+  width: 90%;
+  margin: 40px auto;
+  max-width: 720px;
+  min-width: 360px;
+  padding: 10px;
+}
+h1 {
+  text-align: left;
+  font-size: 35px;
+}
+header>p {
+  text-align: left;
+  font-size: 20px;
+  padding: 5px 0;
+}
+nav {
+  max-width: 720px;
+  min-width: 360px;
+  display: table;
+  background-color: black;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 15px;
+}
+nav>ul { display: table-row }
+nav>ul>li {
+  display: table-cell;
+  text-align: center;
+  width: 16%;
+  white-space: nowrap;
+  padding: 5px 0;
+}
+nav>ul>li>a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.arrange a:hover {color: cyan;}
+.arrange a:active {  color: lime; }
+
+.choice a:hover {color: cyan;}
+.choice a:active {  color: lime; }
+
+nav>ul>li>a:hover {  color: cyan; }
+nav>ul>li>a:active {  color: lime; }
+#upper img {  width: 100%
+ }
+
+#upper {
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+  padding-bottom: 10px;
+}
+#content {
+  
+}
+#content p {
+  margin-bottom: 10px;
+  text-align: justify;
+  text-indent: 2em;
+}
+form, #summary_wrapper {
+  display: inline-block;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  margin-top:10px;
+  width:100%;
+  font-size: 1.2em;   
+}
+iframe {
+  margin: 20px 0 20px 40px;
+  
+}
+.copy {
+  text-align: center; 
+  padding-top: 15px;
+}
+.map{
+    width: 70%;
+}
+
+.bodycenter {
+    border-color: gray;
+    background-color: lightgray;
+    border-radius: 15px;
+    border: solid 4px #a1a1a1;
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 720px;
+    min-width: 360px;
+}
+#align_form {
+    margin:auto;
+    width: 90%;
+    max-width: 720px;
+    min-width: 360px;
+}
+fieldset {
+  border: solid 5px black;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  padding:10px; 
+}
+
+input, select, textarea {
+  display: block;
+  margin: 2px;
+  box-sizing: border-box;
+  border: 2px black solid;
+  border-radius: 4px;
+  background-color:white
+}
+input[type=text], input[type=password], select, textarea 
+{
+  width: 40%;
+}
+
+input:required:invalid {
+    
+  background: white right no-repeat url("invalid.png");
+}
+input:required:valid {
+  background: white right no-repeat url("valid.png");
+}
+input:required:valid ~ p.info {
+  visibility: hidden;
+}
+.inputitem {
+  display: block;
+  
+    
+}
+.labelitem {
+  display: block;
+  vertical-align: text-top;
+  margin: 2px;
+}
+
+legend {
+    font-weight:bold;
+    font-style:italic;
+}
+br {
+  clear: left;
+}
+p.info {
+  font-size: 0.7em;
+  color: red;
+  display: block;
+  margin: 0 0 0 2px;
+}
+#reset_submit {
+  float: right;
+  text-align: right;
+  
+}
+#summary_wrapper {
+  display: none;
+  
+}
+.radio{
+    float:left;
+    text-align: center;
+}
+@media print { 
+    #content {
+      -webkit-columns: 0px 1;
+      -moz-columns: 0px 1;
+      -ms-columns: 0px 1;
+      -o-columns: 0px 1;
+      columns: 1;
+      -webkit-column-gap: 0px;
+      -moz-column-gap: 0px;
+      -ms-column-gap: 0px;
+      -o-column-gap: 0px;
+      column-gap: 0px;
+      -webkit-column-rule: thin white solid;
+      -moz-column-rule: thin white solid;
+      -ms-column-rule: thin white solid;
+      -o-column-rule: thin white solid;
+      column-rule: thin white solid;
+      text-align: justify;
+    }
+    #wrapper {
+      box-shadow: none;
+      width: 90%;
+      margin: 10px auto;
+      background-color: white;
+      padding: 10px;
+      text-align: justify;
+      display: table;
+    }  
+}
+.bodycenter>p { 
+  font-family: serif;
+  margin-left: 30px;
+  padding-left: 35px;
+  margin: 0
+}
+h1 {
+  color: black;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+//**********//
+.arrange>button{
+width: 30%;
+}
+
+.whole{
+    border-color:gray;
+    border-radius: 20px;
+    border: solid 5px #a1a1a1;
+    max-width: 720px;
+    min-width: 360px;
+    width:100%;}
+    
+
+
+#upper {
+  font-size: 20px;
+  font-style: italic;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.content {
+    padding: 10px 10px;
+    background-color: lightgray;
+  
+}
+
+.content2{
+    padding: 10px 5px;
+    background-color: darkgray;
+}
+.content p {
+  margin: 5px;
+  text-align: justify;
+  text-indent: 2em;
+  font-size: 1.5em;
+}
+.arrange{
+    text-align: center;
+    padding: 40px;
+    background-color: darkgray;
+}
+.video{
+    text-align: center;}
+.video>iframe{
+    width: 40%;
+}
+
+button{
+  color: white;
+  border: solid 4px #a1a1a1;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+hr{
+    max-width: 720px;
+   min-width: 360px;
+    height:2px;
+    border-width:0;
+    color:black;
+    background-color:gray;
+}
+
+.content2>p{
+font-size: 1.5em;
+text-indent: 2em;
+font-family: Arial;}
+
+.choice{
+   text-align: center;
+   margin-top: 60px;}
+
+.choice>button{
+    margin: 0 60px;  
+}
+.choice a{
+text-decoration: none;
+color: white;}
+.copy>button>a{
+   text-decoration: none;
+    color: white;
+   }
+
+.bottombar{
+  width: 100%;
+  margin: 10px auto;
+  max-width: 1024px;
+  min-width: 360px;
+  padding-top: 45px ;
+}
+
+.arrange a{
+    text-decoration: none;
+    color: white;
+}
+.about{
+    border-color:gray;
+    border-radius: 20px;
+    border: solid 5px #a1a1a1;
+    max-width: 720px;
+    width:100%;
+    padding-bottom: 20px;
+}
+
+.about img{
+ width:calc(25% - 20px);
+border: solid 5px black;}
+
+.desc{
+    padding: 5px 5px;
+    width: 75%;
+    float:left;}
+.about h1{
+margin-left: 5px;}
+
+.bodycenter h1{
+margin-left: 32px;}
+
+
+.labelitem{
+    width: 100%;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link rel="shortcut icon" href="ico.png" type="image/x-icon" />
+    <title>LiveHire | Application Form</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="site.css" />
+    <script src="site.js"></script>
+  </head>
+  <body>
+      <div class="top">
+      <div class="logo">
+          <img src="logo.png" width="320" alt="Logo"></div>
+    <div class="topbar">
+        <nav>
+          <ul>
+           <li><a href="Home.html" target="_blank">Home</a></li>
+            <li><a href="Selection.html" target="_blank">Arrange A Performance</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
+            <li><a href="contact.html" target="_blank">Contact</a></li>
+          </ul>
+        </nav>
+          </div></div>
+    <div id = "align_form">
+    <form name="form1" id="form1" autocomplete="off" method="get" onsubmit="summarize(); return false;">
+    
+      <fieldset>
+        <legend>User Info</legend>
+        <label for="firstname" class="labelitem">First name:</label>
+        <input type="text" name="firstname" id="firstname" size="32" maxlength="32"
+               placeholder="Enter first name." required pattern="[a-zA-Z][a-zA-Z'\- ]*"
+               title="First name cannot be blank." /><br />
+        <label for="lastname" class="labelitem">Last name:</label>
+        <input type="text" name="lastname" id="lastname" size="32" maxlength="32"
+               placeholder="Enter last name." required pattern="[a-zA-Z][a-zA-Z'\- ]*"
+               title="Last name cannot be blank." /><br />
+        <label for="orgname" class="labelitem">Organization Name:</label>
+        <input type="text" name="orgname" id="orgname" size="32" maxlength="32"
+               placeholder="Enter organization name." pattern="[a-zA-Z][a-zA-Z'\- ]*"
+                /><br />
+        <div class="labelitem"><label for="address1">Address:</label></div>
+        <div class="inputitem">
+          <input type="text" name="address1" id="address1" size="32" maxlength="32"
+                 placeholder="Enter street address." required pattern=".+"
+                 title="Address cannot be blank." /><br />
+          <input type="text" name="address2" id="address2" size="32" maxlength="32" /><br />
+        </div><br />
+        <label for="city" class="labelitem">City:</label>
+        <input type="text" name="city" id="city" size="32" maxlength="32"
+               placeholder="Enter city." required /><br />
+        <label for="state" class="labelitem">State:</label>
+        <select name="state" id="state" required>
+          <option value="" selected disabled>Choose a state</option>
+          <optgroup label="Mid-Atlantic">
+            <option value="Delaware">Delaware</option>
+            <option value="Washington, D.C.">Washington, D.C.</option>
+            <option value="Maryland">Maryland</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New York">New York</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Virginia">Virginia</option>
+            <option value="West Virginia">West Virginia</option>
+          </optgroup>
+          <optgroup label="New England">
+            <option value="Connecticut">Connecticut</option>
+            <option value="Maine">Maine</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="Vermont">Vermont</option>
+          </optgroup>
+        </select><br />
+        <label for="zipcode" class="labelitem">Zip code:</label>
+        <input type="text" name="zipcode" id="zipcode" size="32" maxlength="10"
+               placeholder="Enter zip code." required pattern="\d{5}(\-\d{4})?"
+               title="xxxxx or xxxxx-xxxx" /><br />
+      </fieldset>
+      <fieldset id = "eventset">
+        <legend>Event Info</legend>
+        <label for="EventTitle" class="labelitem">Event Title:</label>
+        <input type="text" name="EventTitle" id="EventTitle" size="32" maxlength="8" required /><br />
+        
+        <br /><br />
+        <div class="labelitem">Genre:</div>
+        <div class="inputitem">
+          <input class = "radio" type="radio" name="event_type" id="rap" value="rap" checked />
+          <label for="rap">Hip-Hop</label><br />
+          <input class = "radio" type="radio" name="event_type" id="rock" value="rock" />
+          <label for="rock">Rock</label><br />
+          <input class = "radio" type="radio" name="event_type" id="jazz" value="jazz" />
+          <label for="jazz">Jazz</label><br />
+          <input class = "radio" type="radio" name="event_type" id="orch" value="orch" />
+          <label for="orch">Orchestral</label><br />
+          <input class = "radio" type="radio" name="event_type" id="band" value="band" />
+          <label for="band">Brass Band</label><br />
+        </div><br /><br />
+        <div class="labelitem">Special Instructions:</div>
+        <div class="inputitem">
+          <input class = "radio" type="checkbox" name="special[]" id="ambient" value="ambient" />
+          <label for="ambient">Ambient, Background Music Only</label><br />
+          <input class = "radio" type="checkbox" name="special[]" id="instrumental" value="instrumental" />
+          <label for="instrumental">Instrumental Only</label><br />
+          <input class = "radio" type="checkbox" name="special[]" id="acapella" value="acapella" />
+          <label for="acapella">A Capella</label><br />
+          <input class = "radio" type="checkbox" name="special[]" id="clean" value="clean" />
+          <label for="clean">Clean Lyrics Only</label><br />
+        </div><br />
+        <label for="event_date" class="labelitem">Event Date:</label>
+        <input type="date" name="event_date" id="event_date" /><br />
+        <label for="custom_input" class="labelitem">Other Details</label>
+        <textarea name="custom_input" id="custom_input" rows="10" cols="20" placeholder="Tell us about your event!"></textarea><br />
+      </fieldset>
+      <section id="reset_submit">
+        <input type="reset" value="Reset" onclick="reset_form()" />
+        <input type="submit" value="Submit" />
+      </section><br />
+      <div id="summary_wrapper">
+        <fieldset name = "sum" id = "sum">
+          <legend>Your Match</legend>
+          <section id="summary"></section>
+        </fieldset>
+      </div>
+      
+    </form>
+ </div>
+      <hr/>
+    <div class="copy">
+        <a>Copyright &copy; 2015. Livehire Company name All rights reserved.</a>
+    </div>
+  </body>
+</html>
